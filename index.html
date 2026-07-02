@@ -730,6 +730,420 @@
       color: var(--gold);
     }
 
+    /* ===== FOOTER ===== */
+    footer {
+      margin-top: 1rem;
+      padding: 2rem 0.5rem 1.5rem;
+      border-top: 1px solid rgba(180, 139, 44, 0.15);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.2rem;
+      color: var(--text);
+      animation: fadeUp 0.6s ease;
+      transition: border-color 0.4s ease, color 0.4s ease;
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .footer-links a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: 0.2s;
+    }
+    .footer-links a:hover {
+      border-bottom-color: var(--gold);
+    }
+    .social-icons {
+      display: flex;
+      gap: 1.2rem;
+      font-size: 1.3rem;
+    }
+    .social-icons a {
+      color: var(--text);
+      transition: 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: var(--gold);
+      transform: scale(1.15) rotate(-3deg);
+    }
+
+/* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+        border-radius: 2rem;
+        padding: 1rem 1.2rem;
+      }
+      .nav-links {
+        justify-content: center;
+        gap: 0.5rem 1rem;
+      }
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 2rem 1.2rem;
+      }
+      .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      .section-title {
+        font-size: 1.7rem;
+      }
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .patch-widget {
+        width: calc(100vw - 32px);
+        right: 16px;
+        bottom: 80px;
+        max-height: 80vh;
+      }
+      .patch-widget iframe {
+        height: 340px;
+      }
+      .patch-floating-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        font-size: 1.4rem;
+      }
+      .theme-toggle {
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 0.5rem 0;
+      }
+      .form-card {
+        padding: 1.5rem 1rem;
+      }
+      .contact-card {
+        padding: 1.2rem 1.2rem;
+      }
+      .patch-widget {
+        padding: 0.8rem;
+        max-height: 75vh;
+      }
+      .patch-widget iframe {
+        height: 280px;
+      }
+      .patch-floating-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        bottom: 16px;
+        right: 16px;
+      }
+      .patch-floating-btn .tooltip {
+        display: none;
+      }
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== DARK MODE TOGGLE ===== -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <header class="navbar">
+      <div class="logo">
+        <span class="logo-placeholder">Z</span>
+        <span class="guild-name">✿Zᴇɴʏʀꫝ ESᎮ✿</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#guild-info">Guild</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#join">Join</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- ===== HOME ===== -->
+    <section id="home">
+      <div class="hero">
+        <div class="hero-content">
+          <h1><span class="gold">✿Zᴇɴʏʀꫝ ESᎮ✿</span> · Elite</h1>
+          <p>Indian server · Level 10+ · Any rank welcome. Join the legacy.</p>
+          <div style="margin-bottom: 1.2rem;">
+            <span class="location-badge"><i class="fas fa-map-pin"></i> Bharatpur, Rajasthan, India</span>
+          </div>
+          <a href="#join" class="btn-gold">Join the Guild</a>
+        </div>
+        <div class="hero-logo">
+          <span class="logo-placeholder" style="width:110px;height:110px;border-radius:32px;font-size:4.5rem;">Z</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GUILD INFORMATION ===== -->
+    <section id="guild-info">
+      <h2 class="section-title">Guild Info <span>official</span></h2>
+
+      <!-- Guild Cards -->
+      <div class="card-grid">
+        <div class="info-card animate delay-1">
+          <h3>🏷️ Guild Name</h3>
+          <p>✿Zᴇɴʏʀꫝ ESᎮ✿</p>
+        </div>
+        <div class="info-card animate delay-2">
+          <h3>🆔 UID</h3>
+          <p>3052330040</p>
+        </div>
+        <div class="info-card animate delay-3">
+          <h3>🌍 Location</h3>
+          <p>Bharatpur, Rajasthan, India</p>
+        </div>
+        <div class="info-card animate delay-4">
+          <h3>📌 Status</h3>
+          <p><span class="gold">● Open</span></p>
+        </div>
+        <div class="info-card animate delay-1">
+          <h3>📈 Level</h3>
+          <p>1</p>
+        </div>
+        <div class="info-card animate delay-2">
+          <h3>📧 Contact</h3>
+          <p>ffarenaesports@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Requirements & Rules -->
+      <div class="two-col">
+        <div class="info-card animate delay-3">
+          <h3>⚡ Requirements</h3>
+          <ul class="rule-list">
+            <li>Minimum Level: 10+</li>
+            <li>Rank: Any Rank</li>
+            <li>Server: Indian Server Only</li>
+            <li>Active & respectful</li>
+          </ul>
+        </div>
+        <div class="info-card animate delay-4">
+          <h3>📋 Guild Rules</h3>
+          <ul class="rule-list">
+            <li>Respect all members</li>
+            <li>No toxicity / hacking</li>
+            <li>Follow IGL calls</li>
+            <li>Admins decision final</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GUILD MEMBERS ===== -->
+    <section id="members">
+      <h2 class="section-title">Members <span>real</span></h2>
+      <div class="members-placeholder glass animate">
+        <p style="font-size:1.2rem;">👥 No Members Added Yet</p>
+        <p style="color:#5a4a2a;">Real members will appear once added.</p>
+      </div>
+    </section>
+
+    <!-- ===== JOIN GUILD (FORM) ===== -->
+    <section id="join">
+      <h2 class="section-title">Join Guild <span>application</span></h2>
+      <div class="form-card glass animate">
+        <form id="guildForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="fullName" required />
+            </div>
+            <div class="form-group">
+              <label>Free Fire UID *</label>
+              <input type="text" id="ffUid" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>In Game Name (IGN) *</label>
+              <input type="text" id="ign" required />
+            </div>
+            <div class="form-group">
+              <label>Age *</label>
+              <input type="number" id="age" min="10" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+              <label>Current Level *</label>
+              <input type="number" id="level" min="1" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Current Rank *</label>
+              <select id="rank" required>
+                <option value="">Select</option>
+                <option>Bronze</option>
+                <option>Silver</option>
+                <option>Gold</option>
+                <option>Platinum</option>
+                <option>Diamond</option>
+                <option>Heroic</option>
+                <option>Elite Heroic</option>
+                <option>Master</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Experience *</label>
+              <select id="experience" required>
+                <option value="">Select</option>
+                <option>1 Year</option>
+                <option>2 Years</option>
+                <option>3 Years</option>
+                <option>4 Years</option>
+                <option>5 Years</option>
+                <option>6 Years</option>
+                <option>7 Years</option>
+                <option>8 Years</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Playing Role *</label>
+              <select id="role" required>
+                <option value="">Select</option>
+                <option>Rusher</option>
+                <option>Sniper</option>
+                <option>Support</option>
+                <option>IGL</option>
+                <option>All Rounder</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Device *</label>
+              <select id="device" required>
+                <option value="">Select</option>
+                <option>Android</option>
+                <option>iPhone</option>
+                <option>iPad</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Server *</label>
+            <select id="server" required>
+              <option value="India">India</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>About Yourself (max 200 words) *</label>
+            <textarea id="about" maxlength="1200" required></textarea>
+          </div>
+
+          <div class="checkbox-group form-group">
+            <input type="checkbox" id="terms" required />
+            <label for="terms">I accept the Terms & Conditions and Privacy Policy *</label>
+          </div>
+          <button type="submit" class="btn-gold" id="submitBtn" style="width:100%;justify-content:center;">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+      <h2 class="section-title">Contact <span>reach us</span></h2>
+      <div class="contact-grid">
+        <!-- Card 1: Email, Support Hours, FAQs -->
+        <div class="contact-card animate delay-1">
+          <h3><i class="fas fa-envelope gold"></i> Email</h3>
+          <p>ffarenaesports@gmail.com</p>
+          <h3 style="margin-top:1.2rem;"><i class="fas fa-clock gold"></i> Support Hours</h3>
+          <p>Mon–Sat · 10:00 – 22:00 IST</p>
+          <h3 style="margin-top:1.2rem;"><i class="fas fa-question-circle gold"></i> FAQs</h3>
+
+          <!-- FAQ Accordion -->
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              How to apply? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">Fill the application form above with all required details and submit. Our team will review and contact you.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Any rank accepted? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">Yes! We accept players of any rank. We believe in growing together as a team.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Indian server only? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">Yes, we play only on the Indian server to maintain low ping and better coordination.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              What is the minimum level? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">Minimum level required is 10. We want players who are active and dedicated.</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Contact Card + Social Icons -->
+        <div class="contact-card animate delay-2">
+          <h3><i class="fas fa-address-card gold"></i> Contact Card</h3>
+          <p><strong>Guild:</strong> ✿Zᴇɴʏʀꫝ ESᎮ✿</p>
+          <p><strong>Location:</strong> Bharatpur, Rajasthan, India</p>
+          <p><strong>Email:</strong> ffarenaesports@gmail.com</p>
+          <p><strong>Server:</strong> India</p>
+          <div class="social-icons">
+            <a href="https://www.tiktok.com/@freefirenewshq?_r=1&_t=ZS-97gyi5xWj5R" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://t.me/freefirenewshq" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.instagram.com/zenyraesp" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/channel/AbZqNqY0l1GWP6EJ/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.threads.com/@freefirenewshq" target="_blank"><i class="fab fa-threads"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== FOOTER ===== -->
     <footer>
       <div><strong>FF NEWS HQ</strong> · © 2026</div>
@@ -977,75 +1391,3 @@
   </script>
 </body>
 </html>
-
-    footer {
-      margin-top: 1rem;
-      padding: 2rem 0.5rem 1.5rem;
-      border-top: 1px solid rgba(180, 139, 44, 0.15);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.2rem;
-      color: var(--text);
-      animation: fadeUp 0.6s ease;
-      transition: border-color 0.4s ease, color 0.4s ease;
-    }
-    .footer-links {
-      display: flex;
-      gap: 1.8rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .footer-links a {
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: 0.2s;
-    }
-    .footer-links a:hover {
-      border-bottom-color: var(--gold);
-    }
-    .social-icons {
-      display: flex;
-      gap: 1.2rem;
-      font-size: 1.3rem;
-    }
-    .social-icons a {
-      color: var(--text);
-      transition: 0.3s ease;
-    }
-    .social-icons a:hover {
-      color: var(--gold);
-      transform: scale(1.15) rotate(-3deg);
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.6rem;
-        border-radius: 2rem;
-        padding: 1rem 1.2rem;
-      }
-      .nav-links {
-        justify-content: center;
-        gap: 0.5rem 1rem;
-      }
-      .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 2rem 1.2rem;
-      }
-      .hero-content p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-      .section-ti
